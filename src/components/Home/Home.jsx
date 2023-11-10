@@ -1,8 +1,8 @@
 import Slider from "../Header/Slider";
+import Menu from "../Menu/Menu";
 import Recommends from "../Recommends/Recommends";
 import Banner from "./Banner";
 import Contact from "./Contact";
-import Menu from "./Menu";
 import MenuBanner from "./MenuBanner";
 import OnlineOrder from "./OnlineOrder";
 

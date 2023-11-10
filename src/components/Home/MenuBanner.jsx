@@ -3,8 +3,8 @@ import banner from '../../assets/home/featured.jpg';
 const MenuBanner = () => {
     return (
         <div>
-           <div>
-            <img src={banner} alt="" /></div> 
+            <div className='my-20'>
+                <img className='w-full h-[80vh]' src={banner} alt="" /></div>
         </div>
     );
 };
