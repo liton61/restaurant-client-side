@@ -1,4 +1,5 @@
 import Slider from "../Header/Slider";
+import Banner from "./Banner";
 import OnlineOrder from "./OnlineOrder";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
            <Slider></Slider>
            <OnlineOrder></OnlineOrder>
+           <Banner></Banner>
         </div>
     );
 };

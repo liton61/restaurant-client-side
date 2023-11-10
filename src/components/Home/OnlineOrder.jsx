@@ -22,7 +22,7 @@ const OnlineOrder = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper w-1/2 mb-16"
+        className="mySwiper lg:w-3/4 mb-16"
       >
         <SwiperSlide>
           <img src={slide1} alt="" />
