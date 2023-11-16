@@ -1,4 +1,4 @@
-import banner from '../../assets/home/chef-service.jpg';
+import banner from '../../assets/chef-service.jpg';
 
 const Banner = () => {
     return (

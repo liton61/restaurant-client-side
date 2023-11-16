@@ -1,14 +1,16 @@
-import banner from '../../assets/home/featured.jpg';
+import banner from '../../assets/featured.jpg';
+import Title from '../Title/Title';
+import './MenuBanner.css';
 
 const MenuBanner = () => {
     return (
         <div>
-            <div className='my-20'>
-                <div className='w-72 mx-auto mb-10 mt-16'>
-                    <h3 className='text-yellow-500 italic mb-5 text-center'> ---From 11:00am to 10:00pm--- </h3>
-                    <h1 className='text-3xl font-semibold border-y-4 py-4 text-center'>ORDER ONLINE</h1>
-                </div>
-                <div className='lg:flex md:flex items-center lg:w-3/4 md:w-full w-full mx-auto'>
+            <div className='my-20 bg-image'>
+                <Title
+                    title={'FROM OUR MENU'}
+                    subTitle={'Check it out'}
+                ></Title>
+                <div className='lg:flex md:flex items-center lg:w-3/4 md:w-full w-full mx-auto py-20'>
                     <div>
                         <img src={banner} alt="" />
                     </div>

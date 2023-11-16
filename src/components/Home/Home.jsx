@@ -1,10 +1,11 @@
+import { Helmet } from "react-helmet";
 import Slider from "../Header/Slider";
-import Menu from "../Menu/Menu";
-import Recommends from "../Recommends/Recommends";
 import Banner from "./Banner";
-import Contact from "./Contact";
-import MenuBanner from "./MenuBanner";
 import OnlineOrder from "./OnlineOrder";
+import MenuBanner from "./MenuBanner";
+import Contact from "./Contact";
+import PopularMenu from "./PopularMenu";
+import Recommends from "./Recommends";
 
 
 const Home = () => {
@@ -13,10 +14,13 @@ const Home = () => {
             <Slider></Slider>
             <OnlineOrder></OnlineOrder>
             <Banner></Banner>
-            <Menu></Menu>
+            <PopularMenu></PopularMenu>
             <Contact></Contact>
             <Recommends></Recommends>
             <MenuBanner></MenuBanner>
+            <Helmet>
+                <title>Bistro Boss | Home</title>
+            </Helmet>
         </div>
     );
 };
