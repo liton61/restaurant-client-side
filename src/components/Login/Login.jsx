@@ -5,16 +5,26 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import google from '../../assets/google.jpg';
+import userAxiosPublic from '../Hooks/userAxiosPublic';
 
 
 const Login = () => {
+    const axiosPublic = userAxiosPublic();
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
 
     const googleLogin = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
-                console.log(result);
+                console.log(result.user);
+                const userInfo = {
+                    email: result.user?.email,
+                    user: result.user?.displayName
+                }
+                axiosPublic.post('/user', userInfo)
+                    .then(res => {
+                        console.log(res.data);
+                    })
                 window.location.href = '/';
             })
             .catch((error) => console.log(error))

@@ -2,11 +2,34 @@ import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import userAxiosPublic from '../Hooks/userAxiosPublic';
+import google from '../../assets/google.jpg';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 
 const Register = () => {
+    const axiosPublic = userAxiosPublic();
     const { createUser, profile } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    const googleLogin = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                console.log(result.user);
+                const userInfo = {
+                    email: result.user?.email,
+                    user: result.user?.displayName
+                }
+                axiosPublic.post('/user', userInfo)
+                    .then(res => {
+                        console.log(res.data);
+                    })
+                window.location.href = '/';
+            })
+            .catch((error) => console.log(error))
+    }
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -50,15 +73,25 @@ const Register = () => {
                 console.log(res);
                 profile(name, photo)
                     .then(() => {
-                        Swal.fire({
-                            position: 'top',
-                            icon: 'success',
-                            title: 'You have successfully registered !',
-                            showConfirmButton: false,
-                            timer: 2000
-                        });
-                        navigate(location?.state ? location.state : '/')
-                            .catch(error => console.log(error))
+                        const userInfo = {
+                            name: name,
+                            email: email
+                        }
+                        axiosPublic.post('/user', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    Swal.fire({
+                                        position: 'top',
+                                        icon: 'success',
+                                        title: 'You have successfully registered !',
+                                        showConfirmButton: false,
+                                        timer: 2000
+                                    });
+                                    navigate(location?.state ? location.state : '/')
+                                        .catch(error => console.log(error))
+                                }
+                            })
+
                     })
             })
 
@@ -88,6 +121,9 @@ const Register = () => {
                         </div>
                         <div className="mb-6">
                             <button type="submit" className="w-full bg-green-300 py-2 px-4 rounded-lg hover:bg-green-400 focus:outline-none focus:bg-green-400 font-medium">Register</button>
+                        </div>
+                        <div className="mb-6 flex justify-center items-center">
+                            <img onClick={googleLogin} className='w-16 h-16 rounded-full cursor-pointer' src={google} alt="" />
                         </div>
                     </form>
                     <p className="text-gray-600 text-sm text-center">Already have an account? <a href="/login" className="text-green-400">Login</a></p>

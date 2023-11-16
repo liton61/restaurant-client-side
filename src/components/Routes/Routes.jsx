@@ -8,6 +8,8 @@ import Order from "../Order/Order";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Cart from "../Dashboard/Cart";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AllUsers from "../Dashboard/AllUsers";
 
 
 const router = createBrowserRouter([
@@ -40,11 +42,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
         path: "cart",
         element: <Cart></Cart>
+      },
+      {
+        path: "allUsers",
+        element: <AllUsers></AllUsers>
       }
     ]
   }
