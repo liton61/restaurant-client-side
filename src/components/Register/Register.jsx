@@ -2,12 +2,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import userAxiosPublic from '../Hooks/userAxiosPublic';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 import google from '../../assets/google.jpg';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 
 const Register = () => {
-    const axiosPublic = userAxiosPublic();
+    const axiosPublic = useAxiosPublic();
     const { createUser, profile } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();

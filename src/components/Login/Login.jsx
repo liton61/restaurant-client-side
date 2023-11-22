@@ -5,11 +5,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import google from '../../assets/google.jpg';
-import userAxiosPublic from '../Hooks/userAxiosPublic';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 
 
 const Login = () => {
-    const axiosPublic = userAxiosPublic();
+    const axiosPublic = useAxiosPublic();
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
 
