@@ -1,0 +1,44 @@
+[
+    {
+        "image": "https://i.postimg.cc/PNGRSDhR/slide5.jpg",
+        "price": 9.99,
+        "name": "Classic Caesar Salad",
+        "description": "Crisp romaine lettuce, parmesan cheese, croutons, and Caesar dressing.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://i.postimg.cc/PNGRSDhR/slide5.jpg",
+        "price": 8.49,
+        "name": "Greek Salad",
+        "description": "Fresh cucumbers, tomatoes, olives, feta cheese, and Greek dressing.",
+        "rating": 4.2
+    },
+    {
+        "image": "https://i.postimg.cc/PNGRSDhR/slide5.jpg",
+        "price": 10.99,
+        "name": "Caprese Salad",
+        "description": "Ripe tomatoes, mozzarella cheese, basil leaves, olive oil, and balsamic glaze.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://i.postimg.cc/PNGRSDhR/slide5.jpg",
+        "price": 7.99,
+        "name": "Mediterranean Salad",
+        "description": "Mixed greens, roasted peppers, artichoke hearts, and vinaigrette dressing.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://i.postimg.cc/PNGRSDhR/slide5.jpg",
+        "price": 11.49,
+        "name": "Spinach and Strawberry",
+        "description": "Fresh spinach, sliced strawberries, almonds, feta, and raspberry vinaigrette.",
+        "rating": 4.8
+    },
+    {
+        "image": "https://i.postimg.cc/PNGRSDhR/slide5.jpg",
+        "price": 9.79,
+        "name": "Asian Sesame Salad",
+        "description": "Napa cabbage, carrots, mandarin oranges, almonds, and sesame ginger dressing.",
+        "rating": 4.4
+    }
+]
