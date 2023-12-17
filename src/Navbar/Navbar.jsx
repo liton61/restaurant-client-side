@@ -30,12 +30,12 @@ const Navbar = () => {
                             Home
                         </NavLink></li>
                         <li className="mx-2 font-medium"><NavLink
-                            to="/contact"
+                            to="/ourMenu"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            Contact
+                            Our Menu
                         </NavLink></li>
                     </ul>
                 </div>
