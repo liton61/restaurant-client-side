@@ -5,7 +5,7 @@ import logo from '../assets/bistro.png';
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-gray-400">
+            <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,12 +30,20 @@ const Navbar = () => {
                             Home
                         </NavLink></li>
                         <li className="mx-2 font-medium"><NavLink
-                            to="/ourMenu"
+                            to="/menu"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            Our Menu
+                            Menu
+                        </NavLink></li>
+                        <li className="mx-2 font-medium"><NavLink
+                            to="/order"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Order
                         </NavLink></li>
                     </ul>
                 </div>
