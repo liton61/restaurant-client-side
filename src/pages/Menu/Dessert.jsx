@@ -1,18 +1,8 @@
-import { useState } from 'react';
 import useMenu from '../../hooks/useMenu';
 
 const Dessert = () => {
     const [menu] = useMenu();
     const dessert = menu.filter(item => item.category === 'dessert');
-    const [showAll, setShowAll] = useState(false);
-
-    // Function to toggle showing all items
-    const handleShowAll = () => {
-        setShowAll(!showAll);
-    };
-
-    // Display maximum 8 items or all items if 'Show All' is clicked
-    const displayItems = showAll ? dessert : dessert.slice(0, 8);
 
     return (
         <div>
@@ -20,7 +10,7 @@ const Dessert = () => {
                 <h3 className='text-xl font-semibold border-y-4 text-center py-3'>Our Dessert</h3>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 mt-10 lg:w-3/4 mx-auto lg:px-0 md:px-5 px-5'>
-                {displayItems.map(item => (
+                {dessert.map(item => (
                     <div key={item._id}>
                         <div className='flex items-center'>
                             <img className='w-20 h-20 rounded-full' src={item.image} alt='' />
@@ -35,13 +25,11 @@ const Dessert = () => {
                     </div>
                 ))}
             </div>
-            {dessert.length > 8 && !showAll && (
-                <div className='flex justify-center mt-5'>
-                    <button onClick={handleShowAll} className='btn btn-neutral text-yellow-500'>
-                        Show All
-                    </button>
-                </div>
-            )}
+            <div className='flex justify-center mt-5'>
+                <button className='btn btn-neutral text-yellow-500'>
+                    Order Now
+                </button>
+            </div>
         </div>
     );
 };
