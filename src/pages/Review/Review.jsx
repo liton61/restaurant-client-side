@@ -1,13 +1,13 @@
 import Cover from "../../components/Cover/Cover";
 
 
-const Order = () => {
+const Review = () => {
     return (
         <div>
             <Cover></Cover>
-            <h1>Order</h1>
+            <h1>Review</h1>
         </div>
     );
 };
 
-export default Order;
+export default Review;
