@@ -79,6 +79,14 @@ const Navbar = () => {
                                 <i className="fa-solid fa-cart-plus"></i>+{item.length}
                             </NavLink></li>
                         }
+                        <li className="mx-2 font-medium"><NavLink
+                            to="/dashboard"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Dashboard
+                        </NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

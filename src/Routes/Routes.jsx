@@ -7,6 +7,8 @@ import Order from "../pages/Order/Order";
 import Review from "../pages/Review/Review";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import Cart from "../pages/Cart/Cart";
 
 
 
@@ -42,6 +44,16 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "cart",
+        element: <Cart></Cart>
+      }
+    ]
+  }
 
 ]);
 
