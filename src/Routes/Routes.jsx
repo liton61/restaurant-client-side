@@ -7,8 +7,12 @@ import Order from "../pages/Order/Order";
 import Review from "../pages/Review/Review";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Dashboard from "../pages/Dashboard/Dashboard";
+// import Dashboard from "../pages/Dashboard/Dashboard";
 import Cart from "../pages/Cart/Cart";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
+import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
+import ManageBooking from "../pages/Dashboard/ManageBooking/ManageBooking";
 
 
 
@@ -51,6 +55,22 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart></Cart>
+      },
+      {
+        path: "addItems",
+        element: <AllUsers></AllUsers>
+      },
+      {
+        path: "manageItems",
+        element: <ManageItems></ManageItems>
+      },
+      {
+        path: "manageBooking",
+        element: <ManageBooking></ManageBooking>
+      },
+      {
+        path: "allUsers",
+        element: <AllUsers></AllUsers>
       }
     ]
   }

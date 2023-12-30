@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../authentication/Provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import useAxiosPublic from "../../hooks/useAxiosPublic/useAxiosPublic";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 const Register = () => {
@@ -18,8 +18,9 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
+        const role = 'member'
 
-        const userInfo = { name, email, password, photo };
+        const userInfo = { name, email, password, photo,role };
         console.log(userInfo);
 
         createUser(email, password)

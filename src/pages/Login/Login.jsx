@@ -4,16 +4,26 @@ import { AuthContext } from "../../authentication/Provider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import google from '../../assets/google.jpg';
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Login = () => {
 
     const { signIn, googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
     const handleGoogleLogin = () => {
         googleLogin()
             .then(res => {
-                console.log(res.data);
+                const usersInfo = {
+                    email: res.user?.email,
+                    name: res.user?.displayName,
+                    role: 'member'
+                }
+                axiosPublic.post('/user', usersInfo)
+                    .then(res => {
+                        console.log(res.data);
+                    })
                 navigate("/");
             })
             .catch(error => {
