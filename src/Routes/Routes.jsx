@@ -13,6 +13,7 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import ManageBooking from "../pages/Dashboard/ManageBooking/ManageBooking";
+import AddItems from "../pages/Dashboard/AddItems/AddItems";
 
 
 
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "addItems",
-        element: <AllUsers></AllUsers>
+        element: <AddItems></AddItems>
       },
       {
         path: "manageItems",
