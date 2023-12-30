@@ -43,7 +43,7 @@ const Dashboard = () => {
                                 </NavLink></li>
                                 <div className="divider">OR</div>
                                 <li className="font-medium mb-2"><NavLink
-                                    to="/dashboard"
+                                    to="/"
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "active" : ""
                                     }
