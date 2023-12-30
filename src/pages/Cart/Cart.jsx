@@ -39,7 +39,18 @@ const Cart = () => {
                 <div className="flex justify-between items-center mt-10 border">
                     <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Items : {cart.length}</h1>
                     <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Price : ${totalPrice}</h1>
-                    <button className="lg:text-lg md:text-lg text-sm font-medium bg-success px-3 py-2 rounded">Pay Now</button>
+                    {totalPrice > 0 ? (
+                        <button className="lg:text-lg md:text-lg text-sm font-medium bg-success px-3 py-2 rounded">
+                            Pay Now
+                        </button>
+                    ) : (
+                        <button
+                            className="lg:text-lg md:text-lg text-sm font-medium bg-gray-300 px-3 py-2 rounded"
+                            disabled
+                        >
+                            Pay Now
+                        </button>
+                    )}
                 </div>
             </div>
             <div className="lg:w-3/4 mx-auto mt-10 lg:px-0 md:px-4 px-4">

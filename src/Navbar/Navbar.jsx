@@ -71,7 +71,7 @@ const Navbar = () => {
                         {
                             user &&
                             <li className="mx-2 font-medium"><NavLink
-                                to="/review"
+                                to="/dashboard/cart"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }

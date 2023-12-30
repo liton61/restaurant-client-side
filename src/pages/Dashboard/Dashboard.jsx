@@ -1,7 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
+import useCart from "../../hooks/useCart";
 
 
 const Dashboard = () => {
+    const [cart] = useCart();
     return (
         <div>
             <div className="drawer">
@@ -23,7 +25,7 @@ const Dashboard = () => {
                                         isPending ? "pending" : isActive ? "active" : ""
                                     }
                                 >
-                                    <i className="fa-solid fa-cart-plus"></i> Cart
+                                    <i className="fa-solid fa-cart-plus"></i> Cart ({cart.length})
                                 </NavLink></li>
                                 <li className="font-medium mb-2"><NavLink
                                     to="/dashboard/reservation"
