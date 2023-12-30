@@ -19,7 +19,7 @@ const Dashboard = () => {
                             </label>
                         </div>
                         <div className="flex-none hidden lg:block lg:w-64 bg-success min-h-screen">
-                            <ul className="menu">
+                            <ul className="menu fixed">
                                 {/* Navbar menu content here */}
                                 {
                                     isAdmin ?

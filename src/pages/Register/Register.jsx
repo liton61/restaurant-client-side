@@ -20,7 +20,7 @@ const Register = () => {
         const photo = form.photo.value;
         const role = 'member'
 
-        const userInfo = { name, email, password, photo,role };
+        const userInfo = { name, email, password, photo, role };
         console.log(userInfo);
 
         createUser(email, password)

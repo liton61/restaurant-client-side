@@ -14,6 +14,7 @@ import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import ManageBooking from "../pages/Dashboard/ManageBooking/ManageBooking";
 import AddItems from "../pages/Dashboard/AddItems/AddItems";
+import UpdateItem from "../pages/UpdateItem/UpdateItem";
 
 
 
@@ -72,6 +73,11 @@ const router = createBrowserRouter([
       {
         path: "allUsers",
         element: <AllUsers></AllUsers>
+      },
+      {
+        path: "updateItem/:id",
+        element: <UpdateItem></UpdateItem>,
+        loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
       }
     ]
   }
