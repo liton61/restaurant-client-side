@@ -25,12 +25,19 @@ const Contact = () => {
         <div>
             <Cover></Cover>
             <div className="bg-gray-200">
-                <div className="lg:w-3/4 mx-auto bg-gray-200 py-12 px-4 sm:px-6 lg:px-8">
+                <div className="lg:w-3/4 mx-auto bg-gray-200 py-24 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
                             <div>
                                 <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact Us</h2>
-                                <p className="mt-4 text-lg text-gray-500">Have questions or want to book a table? Contact us!</p>
+                                <p className="mt-4 text-lg text-gray-500">Have questions or want to book a table? Please contact us!</p>
+                                <h3 className="text-lg font-medium text-gray-900">Location</h3>
+                                <p className="text-sm text-gray-500">123 Restaurant Street</p>
+                                <h3 className="text-lg font-medium text-gray-900">Phone</h3>
+                                <p className="text-sm text-gray-500">+123 456 7890</p>
+                                <p className="text-sm text-gray-500">+123 456 7890</p>
+                                <h3 className="text-lg font-medium text-gray-900">Email</h3>
+                                <p className="text-sm text-gray-500">info@example.com</p>
                             </div>
                             <div className="col-span-2">
                                 <form onSubmit={handleSubmit}>
@@ -52,15 +59,6 @@ const Contact = () => {
                                         <button className="btn btn-success w-full font-bold">Send Message</button>
                                     </div>
                                 </form>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-medium text-gray-900">Location</h3>
-                                <p className="mt-2 text-sm text-gray-500">123 Restaurant Street City, State, ZIP</p>
-                                <h3 className="mt-4 text-lg font-medium text-gray-900">Phone</h3>
-                                <p className="mt-2 text-sm text-gray-500">+123 456 7890</p>
-                                <p className="mt-2 text-sm text-gray-500">+123 456 7890</p>
-                                <h3 className="mt-4 text-lg font-medium text-gray-900">Email</h3>
-                                <p className="mt-2 text-sm text-gray-500">info@example.com</p>
                             </div>
                         </div>
                     </div>

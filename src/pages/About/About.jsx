@@ -1,4 +1,6 @@
-import img1 from '../../assets/authentication1.png';
+import chef from '../../assets/chef.jpg';
+import ambiance from '../../assets/ambiance.jpg';
+import ingredients from '../../assets/ingredients.jpg';
 import Cover from '../../components/Cover/Cover';
 
 const About = () => {
@@ -7,9 +9,9 @@ const About = () => {
             <Cover></Cover>
             <section className="p-6 lg:w-3/4 mx-auto my-10">
                 <div className="mx-auto text-center">
-                    <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Our Restaurant</h2>
-                    <p className="mt-4 text-lg text-gray-500">
-                        Welcome to [Restaurant Name], where we combine passion, expertise, and quality ingredients to create memorable dining experiences for our customers.
+                    <h2 className="text-2xl font-extrabold text-gray-900 sm:text-4xl">About Our Restaurant</h2>
+                    <p className="mt-4 text-lg text-gray-700 text-justify">
+                        Welcome to Bistro Boss where we combine passion, expertise, and quality ingredients to create memorable dining experiences for our customers.It is a place where the art of cooking meets hospitality, offering diverse cuisines, ambiance, and service to cater to various tastes and occasions. Restaurants range from cozy cafes to elegant fine dining establishments, providing an array of dining experiences to satisfy cravings, celebrate special moments, or simply relish good food in good company.
                     </p>
                 </div>
             </section>
@@ -17,15 +19,15 @@ const About = () => {
                 <div className="container mx-auto flex flex-col lg:flex-row items-center">
                     <div className="lg:w-1/2 lg:pr-10 mb-6 lg:mb-0">
                         <img
-                            src={img1}
+                            src={chef}
                             alt="Banker"
                             className="rounded-lg"
                         />
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-3xl font-bold mb-4">Our Chef</h2>
-                        <p className="text-xl text-gray-700 text-justify">
-                            Meet our experienced chef who crafts delightful dishes with creativity and expertise.
+                        <p className="text-lg text-gray-700 text-justify">
+                            Meet our experienced chef who crafts delightful dishes with creativity and expertise.Chefs are culinary wizards who expertly craft mouthwatering dishes, blending creativity, skill, and a deep knowledge of ingredients and flavors to create delightful culinary experiences.
                         </p>
                     </div>
                 </div>
@@ -34,13 +36,13 @@ const About = () => {
                 <div className="container mx-auto flex flex-col lg:flex-row items-center">
                     <div className="lg:w-1/2 lg:pr-10 mb-6 lg:mb-0">
                         <h2 className="text-3xl font-bold mb-4">Our Ambiance</h2>
-                        <p className="text-xl text-gray-700 text-justify">
-                            Experience a cozy and inviting atmosphere designed to enhance your dining pleasure.
+                        <p className="text-lg text-gray-700 text-justify">
+                            It is the intangible quality that sets the tone for an experience, whether in a restaurant, a room, or any environment. Ambiance plays a vital role in influencing emotions, creating a welcoming or specific atmosphere that complements and enhances the overall experience.
                         </p>
                     </div>
                     <div className="lg:w-1/2">
                         <img
-                            src={img1}
+                            src={ambiance}
                             alt="Corporate Professionals"
                             className="rounded-lg"
                         />
@@ -51,54 +53,19 @@ const About = () => {
                 <div className="container mx-auto flex flex-col lg:flex-row items-center">
                     <div className="lg:w-1/2 lg:pr-10 mb-6 lg:mb-0">
                         <img
-                            src={img1}
+                            src={ingredients}
                             alt="Developer"
                             className="rounded-lg"
                         />
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-3xl font-bold mb-4">Local Ingredients</h2>
-                        <p className="text-xl text-gray-700 text-justify">
-                            We source the freshest local ingredients to ensure the highest quality in every dish.
+                        <p className="text-lg text-gray-700 text-justify">
+                            Local ingredients are the heart of regional cuisine, sourced from nearby areas, farms, or producers. They embody the flavors of a specific region, offering freshness and distinct tastes that reflect the areas climate and culture.
                         </p>
                     </div>
                 </div>
             </section>
-            {/* <div className="bg-gray-100">
-                <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-7xl mx-auto text-center">
-                        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">About Our Restaurant</h2>
-                        <p className="mt-4 text-lg text-gray-500">
-                            Welcome to [Restaurant Name], where we combine passion, expertise, and quality ingredients to create memorable dining experiences for our customers.
-                        </p>
-                        <div className="mt-10">
-                            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                                <div className="flex flex-col items-center">
-                                    <img src={img1} alt="Chef" className="rounded-full h-32 w-32 object-cover" />
-                                    <h3 className="mt-4 text-lg font-medium text-gray-900">Our Chef</h3>
-                                    <p className="mt-2 text-sm text-gray-500">
-                                        Meet our experienced chef who crafts delightful dishes with creativity and expertise.
-                                    </p>
-                                </div>
-                                <div className="flex flex-col items-center">
-                                    <img src={img1} alt="Restaurant Interior" className="rounded-lg h-32 w-48 object-cover" />
-                                    <h3 className="mt-4 text-lg font-medium text-gray-900">Our Ambiance</h3>
-                                    <p className="mt-2 text-sm text-gray-500">
-                                        Experience a cozy and inviting atmosphere designed to enhance your dining pleasure.
-                                    </p>
-                                </div>
-                                <div className="flex flex-col items-center">
-                                    <img src={img1} alt="Local Produce" className="rounded-lg h-32 w-48 object-cover" />
-                                    <h3 className="mt-4 text-lg font-medium text-gray-900">Local Ingredients</h3>
-                                    <p className="mt-2 text-sm text-gray-500">
-                                        We source the freshest local ingredients to ensure the highest quality in every dish.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
 };
