@@ -18,7 +18,7 @@ const Menu = () => {
         <div>
             <Cover></Cover>
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                <div className="lg:w-1/2 mx-auto text-center lg:px-0 md:px-5 px-5 mb-10">
+                <div className="lg:w-1/2 mx-auto text-center lg:px-0 md:px-5 px-5 mt-5 mb-10">
                     <TabList>
                         <Tab>Salad</Tab>
                         <Tab>Pizza</Tab>

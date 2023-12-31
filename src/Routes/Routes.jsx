@@ -14,6 +14,7 @@ import AddItems from "../pages/Dashboard/AddItems/AddItems";
 import UpdateItem from "../pages/UpdateItem/UpdateItem";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import About from "../pages/About/About";
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/menu",
         element: <Menu></Menu>
+      },
+      {
+        path: "/about",
+        element: <About></About>
       },
       {
         path: "/login",
