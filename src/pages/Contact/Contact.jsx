@@ -1,69 +1,80 @@
-import Swal from "sweetalert2";
-import Cover from "../../components/Cover/Cover";
 
-
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
-    const handleSubmit = e => {
+    const form = useRef();
+    const sendEmail = (e) => {
         e.preventDefault();
-        const form = e.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const message = form.message.value;
+        emailjs.sendForm('service_5rdxana', 'template_b5h3617', form.current, 'aY09R0x-o_CBd4nUQ')
+            .then((result) => {
+                console.log(result.text);
+                form.current.reset();
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You you have successfully submitted !",
+                    icon: "success"
+                });
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
-        const menuItem = { name, email, message };
-        console.log(menuItem);
-
-        Swal.fire({
-            title: "Good job !",
-            text: "Your message successfully submitted !",
-            icon: "success"
-        });
-        form.reset();
-    }
     return (
-        <div>
-            <Cover></Cover>
-            <div className="bg-gray-200">
-                <div className="lg:w-3/4 mx-auto bg-gray-200 py-24 px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
-                            <div>
-                                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact Us</h2>
-                                <p className="mt-4 text-lg text-gray-500">Have questions or want to book a table? Please contact us!</p>
-                                <h3 className="text-lg font-medium text-gray-900">Location</h3>
-                                <p className="text-sm text-gray-500">123 Restaurant Street</p>
-                                <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                                <p className="text-sm text-gray-500">+123 456 7890</p>
-                                <p className="text-sm text-gray-500">+123 456 7890</p>
-                                <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                                <p className="text-sm text-gray-500">info@example.com</p>
-                            </div>
-                            <div className="col-span-2">
-                                <form onSubmit={handleSubmit}>
-                                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700">Name</label>
-                                            <input type="text" id="name" name="name" className="mt-2 focus:outline-none p-2 w-full rounded" placeholder="Your name" />
-                                        </div>
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700">Email</label>
-                                            <input type="email" id="email" name="email" className="mt-2 focus:outline-none p-2 w-full rounded" placeholder="Your email" />
-                                        </div>
-                                    </div>
-                                    <div className="mt-4">
-                                        <label className="block text-sm font-medium text-gray-700">Message</label>
-                                        <textarea id="message" name="message" rows="4" className="mt-2 focus:outline-none p-2 w-full rounded" placeholder="Message here"></textarea>
-                                    </div>
-                                    <div className="mt-4">
-                                        <button className="btn btn-success w-full font-bold">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+        <div className="max-w-4xl mx-auto bg-gray-200 p-10 my-10 rounded">
+            <div className='flex justify-center'>
+                <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow">
+
+                    <div className="stat">
+                        <div className="stat-title">Location</div>
+                        <div className="stat-desc">Dhaka, Bangladesh</div>
+                    </div>
+                    <div className="stat">
+                        <div className="stat-title">Phone</div>
+                        <div className="stat-desc">+123 456 7890</div>
+                    </div>
+                    <div className="stat">
+                        <div className="stat-title">Email</div>
+                        <div className="stat-desc">info@example.com</div>
                     </div>
                 </div>
             </div>
+            <form ref={form} onSubmit={sendEmail}>
+                <div className="mb-4">
+                    <label htmlFor="name" className="block mb-2 text-lg">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="user_name"
+                        className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+                        required placeholder='Your name'
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="email" className="block mb-2 text-lg">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="user_email"
+                        className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+                        required placeholder='Your email'
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="message" className="block mb-2 text-lg">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+                        rows="5"
+                        required placeholder='Message'
+                    ></textarea>
+                </div>
+                <button className='btn btn-success font-bold w-full'>
+                    Submit
+                </button>
+            </form>
         </div>
     );
 };

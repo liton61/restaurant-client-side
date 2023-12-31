@@ -53,19 +53,11 @@ const Cart = () => {
                                     </div>
 
                                     <div className="stat place-items-center">
-                                    {/* <div className="stat-title">Pay to Card</div> */}
                                         <button className="btn btn-secondary font-bold">Pay Now <i className="fa-solid fa-arrow-right"></i></button>
                                     </div>
 
                                 </div>
                             </div>
-                            {/* <div className="flex justify-between items-center mt-10 border">
-                                <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Items : {cart.length}</h1>
-                                <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Price : ${totalPrice}</h1>
-                                <button className="lg:text-lg md:text-lg text-sm font-medium bg-neutral text-gray-300 px-3 py-2 rounded">
-                                    Pay Now
-                                </button>
-                            </div> */}
                         </div>
                         <div className="lg:w-3/4 mx-auto mt-10 lg:px-0 md:px-4 px-4">
                             <div className="overflow-x-auto">
