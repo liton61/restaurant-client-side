@@ -105,7 +105,15 @@ const Navbar = () => {
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            About Us
+                            About
+                        </NavLink></li>
+                        <li className="mx-2 font-medium"><NavLink
+                            to="/contact"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Contact
                         </NavLink></li>
                         <li className="font-medium mb-2"><NavLink
                             to="/dashboard/cart"

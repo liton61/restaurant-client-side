@@ -15,6 +15,7 @@ import UpdateItem from "../pages/UpdateItem/UpdateItem";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 
 
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
       },
       {
         path: "/login",
