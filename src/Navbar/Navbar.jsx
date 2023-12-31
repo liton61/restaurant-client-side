@@ -3,11 +3,13 @@ import logo from '../assets/bistro.png';
 import { useContext } from "react";
 import { AuthContext } from "../authentication/Provider/AuthProvider";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [item] = useCart();
+    const [isAdmin] = useAdmin();
 
     const handleSingOut = () => {
         logOut()
@@ -44,36 +46,28 @@ const Navbar = () => {
                                 Menu
                             </NavLink></li>
                             <li className="font-medium"><NavLink
-                                to="/order"
+                                to="/dashboard/cart"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
-                                Order
-                            </NavLink></li>
-                            <li className="font-medium"><NavLink
-                                to="/review"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active" : ""
-                                }
-                            >
-                                Review
+                                <i className="fa-solid fa-cart-plus"></i>+{item.length}
                             </NavLink></li>
                             {
-                                user &&
+                                user && isAdmin &&
                                 <li className="font-medium"><NavLink
-                                    to="/dashboard/cart"
+                                    to="/dashboard/adminHome"
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "active" : ""
                                     }
                                 >
-                                    <i className="fa-solid fa-cart-plus"></i>+{item.length}
+                                    Dashboard
                                 </NavLink></li>
                             }
                             {
-                                user &&
+                                user && !isAdmin &&
                                 <li className="font-medium"><NavLink
-                                    to="/dashboard"
+                                    to="/dashboard/userHome"
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "active" : ""
                                     }
@@ -105,37 +99,29 @@ const Navbar = () => {
                         >
                             Menu
                         </NavLink></li>
-                        <li className="mx-2 font-medium"><NavLink
-                            to="/order"
+                        <li className="font-medium mb-2"><NavLink
+                            to="/dashboard/cart"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            Order
-                        </NavLink></li>
-                        <li className="mx-2 font-medium"><NavLink
-                            to="/review"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            Review
+                            <i className="fa-solid fa-cart-plus"></i> Cart ({item.length})
                         </NavLink></li>
                         {
-                            user &&
+                            user && isAdmin &&
                             <li className="mx-2 font-medium"><NavLink
-                                to="/dashboard/cart"
+                                to="/dashboard/adminHome"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
-                                <i className="fa-solid fa-cart-plus"></i>+{item.length}
+                                Dashboard
                             </NavLink></li>
                         }
                         {
-                            user &&
+                            user && !isAdmin &&
                             <li className="mx-2 font-medium"><NavLink
-                                to="/dashboard"
+                                to="/dashboard/userHome"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }

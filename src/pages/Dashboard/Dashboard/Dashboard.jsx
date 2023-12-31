@@ -25,7 +25,7 @@ const Dashboard = () => {
                                     isAdmin ?
                                         <>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/"
+                                                to="/dashboard/adminHome"
                                                 className={({ isActive, isPending }) =>
                                                     isPending ? "pending" : isActive ? "active" : ""
                                                 }
@@ -49,14 +49,6 @@ const Dashboard = () => {
                                                 <i className="fa-solid fa-list"></i> Manage Items
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/dashboard/manageBooking"
-                                                className={({ isActive, isPending }) =>
-                                                    isPending ? "pending" : isActive ? "active" : ""
-                                                }
-                                            >
-                                                <i className="fa-solid fa-book"></i> Mange Booking
-                                            </NavLink></li>
-                                            <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/allUsers"
                                                 className={({ isActive, isPending }) =>
                                                     isPending ? "pending" : isActive ? "active" : ""
@@ -68,7 +60,7 @@ const Dashboard = () => {
                                         :
                                         <>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/"
+                                                to="/dashboard/userHome"
                                                 className={({ isActive, isPending }) =>
                                                     isPending ? "pending" : isActive ? "active" : ""
                                                 }
@@ -82,14 +74,6 @@ const Dashboard = () => {
                                                 }
                                             >
                                                 <i className="fa-solid fa-cart-plus"></i> Cart ({cart.length})
-                                            </NavLink></li>
-                                            <li className="font-medium mb-2"><NavLink
-                                                to="/dashboard/reservation"
-                                                className={({ isActive, isPending }) =>
-                                                    isPending ? "pending" : isActive ? "active" : ""
-                                                }
-                                            >
-                                                <i className="fas fa-calendar-alt"></i> Reservation
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/review"
@@ -109,30 +93,6 @@ const Dashboard = () => {
                                     }
                                 >
                                     <i className="fa-solid fa-house"></i> Home
-                                </NavLink></li>
-                                <li className="font-medium mb-2"><NavLink
-                                    to="/"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "active" : ""
-                                    }
-                                >
-                                    <i className="fa-solid fa-bars"></i> Menu
-                                </NavLink></li>
-                                <li className="font-medium mb-2"><NavLink
-                                    to="/"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "active" : ""
-                                    }
-                                >
-                                    <i className="fa-brands fa-shopify"></i> Shop
-                                </NavLink></li>
-                                <li className="font-medium mb-2"><NavLink
-                                    to="/"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "active" : ""
-                                    }
-                                >
-                                    <i className="fa-solid fa-envelope"></i> Contact
                                 </NavLink></li>
                             </ul>
                         </div>
@@ -241,22 +201,6 @@ const Dashboard = () => {
                             }
                         >
                             <i className="fa-solid fa-bars"></i> Menu
-                        </NavLink></li>
-                        <li className="font-medium mb-2"><NavLink
-                            to="/"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            <i className="fa-brands fa-shopify"></i> Shop
-                        </NavLink></li>
-                        <li className="font-medium mb-2"><NavLink
-                            to="/"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            <i className="fa-solid fa-envelope"></i> Contact
                         </NavLink></li>
                     </ul>
                 </div>

@@ -3,18 +3,17 @@ import Root from "../Root/Root";
 import Home from "../pages/Home/Home";
 import Error from "../pages/Error/Error";
 import Menu from "../pages/Menu/Menu";
-import Order from "../pages/Order/Order";
 import Review from "../pages/Review/Review";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-// import Dashboard from "../pages/Dashboard/Dashboard";
 import Cart from "../pages/Cart/Cart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
-import ManageBooking from "../pages/Dashboard/ManageBooking/ManageBooking";
 import AddItems from "../pages/Dashboard/AddItems/AddItems";
 import UpdateItem from "../pages/UpdateItem/UpdateItem";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
 
 
 
@@ -33,14 +32,6 @@ const router = createBrowserRouter([
         element: <Menu></Menu>
       },
       {
-        path: "/order",
-        element: <Order></Order>
-      },
-      {
-        path: "/review",
-        element: <Review></Review>
-      },
-      {
         path: "/login",
         element: <Login></Login>
       },
@@ -54,10 +45,18 @@ const router = createBrowserRouter([
     path: "dashboard",
     element: <Dashboard></Dashboard>,
     children: [
+
+      // user dashboard
       {
         path: "cart",
         element: <Cart></Cart>
       },
+      {
+        path: "review",
+        element: <Review></Review>
+      },
+
+      // admin dashboard
       {
         path: "addItems",
         element: <AddItems></AddItems>
@@ -67,10 +66,6 @@ const router = createBrowserRouter([
         element: <ManageItems></ManageItems>
       },
       {
-        path: "manageBooking",
-        element: <ManageBooking></ManageBooking>
-      },
-      {
         path: "allUsers",
         element: <AllUsers></AllUsers>
       },
@@ -78,6 +73,14 @@ const router = createBrowserRouter([
         path: "updateItem/:id",
         element: <UpdateItem></UpdateItem>,
         loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+      },
+      {
+        path: "adminHome",
+        element: <AdminHome></AdminHome>
+      },
+      {
+        path: "userHome",
+        element: <UserHome></UserHome>
       }
     ]
   }

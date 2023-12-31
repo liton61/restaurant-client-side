@@ -35,58 +35,61 @@ const Cart = () => {
     }
     return (
         <div>
-            <div className="lg:w-3/4 mx-auto lg:px-0 md:px-4 px-4">
-                <div className="flex justify-between items-center mt-10 border">
-                    <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Items : {cart.length}</h1>
-                    <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Price : ${totalPrice}</h1>
-                    {totalPrice > 0 ? (
-                        <button className="lg:text-lg md:text-lg text-sm font-medium bg-success px-3 py-2 rounded">
-                            Pay Now
-                        </button>
-                    ) : (
-                        <button
-                            className="lg:text-lg md:text-lg text-sm font-medium bg-gray-300 px-3 py-2 rounded"
-                            disabled
-                        >
-                            Pay Now
-                        </button>
-                    )}
-                </div>
-            </div>
-            <div className="lg:w-3/4 mx-auto mt-10 lg:px-0 md:px-4 px-4">
-                <div className="overflow-x-auto">
-                    <table className="table">
-                        <thead className="bg-success">
-                            <tr>
-                                <th>#</th>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                cart.map((item, index) => <tr key={item._id}>
-                                    <th>{index + 1}</th>
-                                    <td>
-                                        <div className="flex items-center gap-3">
-                                            <div className="avatar">
-                                                <div className="rounded-full w-12 h-12">
-                                                    <img src={item.image} alt="Avatar Tailwind CSS Component" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>{item.name}</td>
-                                    <td>${item.price}</td>
-                                    <button onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-5"></i></button>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            {
+                cart.length > 0 ? (
+                    <div>
+                        <div className="lg:w-3/4 mx-auto lg:px-0 md:px-4 px-4">
+                            <div className="flex justify-between items-center mt-10 border">
+                                <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Items : {cart.length}</h1>
+                                <h1 className="lg:text-2xl md:text-2xl text-md font-semibold">Total Price : ${totalPrice}</h1>
+                                <button className="lg:text-lg md:text-lg text-sm font-medium bg-neutral text-gray-300 px-3 py-2 rounded">
+                                    Pay Now
+                                </button>
+                            </div>
+                        </div>
+                        <div className="lg:w-3/4 mx-auto mt-10 lg:px-0 md:px-4 px-4">
+                            <div className="overflow-x-auto">
+                                <table className="table">
+                                    <thead className="bg-success">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            cart.map((item, index) => <tr key={item._id}>
+                                                <th>{index + 1}</th>
+                                                <td>
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="avatar">
+                                                            <div className="rounded-full w-12 h-12">
+                                                                <img src={item.image} alt="Avatar Tailwind CSS Component" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>{item.name}</td>
+                                                <td>${item.price}</td>
+                                                <button onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-5"></i></button>
+                                            </tr>)
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )
+                    :
+                    (
+                        <div className="flex justify-center items-center h-screen">
+                            <p className="text-3xl font-bold">No Items Available</p>
+                        </div>
+                    )
+            }
         </div>
     );
 };

@@ -30,7 +30,6 @@ const AllUsers = () => {
                 }
             })
     }
-
     const handleDeleteUser = user => {
         Swal.fire({
             title: "Are you sure?",
