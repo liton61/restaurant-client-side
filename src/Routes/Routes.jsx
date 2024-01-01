@@ -16,6 +16,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import Order from "../pages/Order/Order";
 
 
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/menu",
         element: <Menu></Menu>
+      },
+      {
+        path: "/order/:category",
+        element: <Order></Order>
       },
       {
         path: "/about",

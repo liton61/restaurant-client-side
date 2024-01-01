@@ -37,13 +37,21 @@ const Navbar = () => {
                             >
                                 Home
                             </NavLink></li>
-                            <li className="font-medium"><NavLink
+                            <li className="mx-2 font-medium"><NavLink
                                 to="/menu"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
                                 Menu
+                            </NavLink></li>
+                            <li className="font-medium"><NavLink
+                                to="/order"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "active" : ""
+                                }
+                            >
+                                Order
                             </NavLink></li>
                             <li className="font-medium"><NavLink
                                 to="/dashboard/cart"
@@ -98,6 +106,14 @@ const Navbar = () => {
                             }
                         >
                             Menu
+                        </NavLink></li>
+                        <li className="mx-2 font-medium"><NavLink
+                            to="/order"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Order
                         </NavLink></li>
                         <li className="mx-2 font-medium"><NavLink
                             to="/about"
