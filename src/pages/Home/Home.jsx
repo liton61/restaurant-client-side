@@ -5,6 +5,7 @@ import Slider from "../../components/Slider/Slider";
 import Slider2 from "../../components/Slider2/Slider2";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import PopularMenu from "../../components/PopularMenu/PopularMenu";
+import MenuBanner from "../../components/MenuBanner/MenuBanner";
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
             <Banner></Banner>
             <PopularMenu></PopularMenu>
             <Salad></Salad>
+            <MenuBanner></MenuBanner>
             <Testimonials></Testimonials>
         </div>
     );
