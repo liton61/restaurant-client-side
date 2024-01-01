@@ -13,7 +13,7 @@ const Category = ({ items, title }) => {
                             <img className="w-20 h-20 rounded-full" src={item.image} alt="" />
                             <div className="ml-5">
                                 <h3 className="font-medium">{item.name} ---------- <span className="text-yellow-500 font-medium">${item.price}</span></h3>
-                                <p className="text-justify">{item.recipe}</p>
+                                <p className="text-justify">{item.description}</p>
                             </div>
                         </div>
                     </div>)

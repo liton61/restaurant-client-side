@@ -51,6 +51,8 @@ const AddItems = () => {
                                 <option value="Dessert">Dessert</option>
                                 <option value="Soup">Soup</option>
                                 <option value="Drinks">Drinks</option>
+                                <option value="Popular">Popular</option>
+                                <option value="Recommended">Recommended</option>
                             </select>
                         </div>
 
@@ -73,12 +75,6 @@ const AddItems = () => {
                         </label>
                         <textarea name="description" className="rounded w-full h-36 p-3 focus:outline-none" id="description" placeholder="Enter description"></textarea>
                     </div>
-                    {/* <div className="mb-3">
-                <label className="block text-sm font-semibold mb-2">
-                    Choose a File
-                </label>
-                <input type="file" id="file" className="p-3 w-full" />
-            </div> */}
                     <div>
                         <button type="submit" className="btn btn-success w-full font-bold">Add Item <i className="fa-solid fa-utensils text-lg"></i></button>
                     </div>

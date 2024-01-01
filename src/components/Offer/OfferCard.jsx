@@ -1,16 +1,15 @@
 /* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useCart from "../../hooks/useCart";
 
 
-const FoodCard = ({ item }) => {
-    const { name, price, image, _id, description } = item;
+const OfferCard = ({ item }) => {
+    const { name, price, image, description, _id } = item;
     const { user } = useAuth();
     const axiosSecure = useAxiosSecure();
     const [, refetch] = useCart();
-
     const handleAddToCart = () => {
         if (user && user.email) {
             const item = {
@@ -61,4 +60,4 @@ const FoodCard = ({ item }) => {
     );
 };
 
-export default FoodCard;
+export default OfferCard;
