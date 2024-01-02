@@ -41,7 +41,7 @@ const ManageItems = () => {
     return (
         <div>
             <div>
-                <div className="overflow-x-auto mt-10">
+                <div className="overflow-x-auto mt-10 lg:mx-0 mx-4">
                     <table className="table lg:w-3/4 mx-auto w-full">
                         {/* head */}
                         <thead className="bg-success">

@@ -133,14 +133,6 @@ const Dashboard = () => {
                                         <i className="fa-solid fa-list"></i> Manage Items
                                     </NavLink></li>
                                     <li className="font-medium mb-2"><NavLink
-                                        to="/dashboard/manageBooking"
-                                        className={({ isActive, isPending }) =>
-                                            isPending ? "pending" : isActive ? "active" : ""
-                                        }
-                                    >
-                                        <i className="fa-solid fa-book"></i> Mange Booking
-                                    </NavLink></li>
-                                    <li className="font-medium mb-2"><NavLink
                                         to="/dashboard/allUsers"
                                         className={({ isActive, isPending }) =>
                                             isPending ? "pending" : isActive ? "active" : ""

@@ -46,14 +46,14 @@ const FoodCard = ({ item }) => {
     }
     return (
         <div>
-            <div className="card card-compact lg:w-80 lg:mb-5 md:w-80 mx-auto md:mb-10 bg-base-100 shadow-xl mb-10 h-96">
+            <div className="card card-compact lg:w-80 lg:mb-5 md:w-80 mx-auto md:mb-10 mb-10 h-96 border border-yellow-600 p-2">
                 <figure><img className="w-full h-40" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p className="font-medium">Price : ${price}</p>
                     <p>{description}</p>
-                    <div className="card-actions justify-center">
-                        <button onClick={handleAddToCart} className="btn btn-neutral text-yellow-500">Add To Cart</button>
+                    <div className="card-actions">
+                        <button onClick={handleAddToCart} className="btn btn-neutral text-yellow-500 w-full">Add To Cart</button>
                     </div>
                 </div>
             </div>

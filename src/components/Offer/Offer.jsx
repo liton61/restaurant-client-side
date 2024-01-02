@@ -1,5 +1,5 @@
 import useMenu from "../../hooks/useMenu";
-import OfferCard from "./OfferCard";
+import FoodCard from "../FoodCard/FoodCard";
 
 
 const Offer = () => {
@@ -13,7 +13,7 @@ const Offer = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-3/4 w-full mx-auto lg:px-0 md:px-0 px-5">
                 {
-                    offered.map(item => <OfferCard key={item._id} item={item}></OfferCard>)
+                    offered.map(item => <FoodCard key={item._id} item={item}></FoodCard>)
                 }
             </div>
         </div>
