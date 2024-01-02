@@ -1,4 +1,8 @@
-import Cover from "../../components/Cover/Cover";
+import Dessert from "../../components/Dessert/Dessert";
+import Drinks from "../../components/Drinks/Drinks";
+import Pizza from "../../components/Pizza/Pizza";
+import Salad from "../../components/Salad/Salad";
+import Soup from "../../components/Soup/Soup";
 import useMenu from "../../hooks/useMenu";
 import Category from "./Category";
 
@@ -10,21 +14,18 @@ const Menu = () => {
     const pizza = menu.filter(item => item.category === 'Pizza');
     const salad = menu.filter(item => item.category === 'Salad');
     const drinks = menu.filter(item => item.category === 'Drinks');
-    const popular = menu.filter(item => item.category === 'Popular');
     return (
         <div>
-            <Cover></Cover>
+            <Dessert></Dessert>
             <Category items={dessert} title={"Dessert"}></Category>
-            <Cover></Cover>
+            <Soup></Soup>
             <Category items={soup} title={"Soup"}></Category>
-            <Cover></Cover>
+            <Pizza></Pizza>
             <Category items={pizza} title={"Pizza"}></Category>
-            <Cover></Cover>
+            <Salad></Salad>
             <Category items={salad} title={"Salad"}></Category>
-            <Cover></Cover>
+            <Drinks></Drinks>
             <Category items={drinks} title={"Drinks"}></Category>
-            <Cover></Cover>
-            <Category items={popular} title={"Popular"}></Category>
         </div>
     );
 };

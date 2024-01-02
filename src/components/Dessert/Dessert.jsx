@@ -1,11 +1,11 @@
-import pizza from '../../assets/banner/pizza.jpg';
+import dessert from '../../assets/banner/dessert.jpg';
 
-const Pizza = () => {
+const Dessert = () => {
     return (
-        <div className='lg:w-3/4 mx-auto lg:px-0 px-5'>
+        <div className='lg:w-3/4 mx-auto lg:px-0 px-5 mt-10'>
             <div className="carousel w-full rounded">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src={pizza} className="w-full h-[70vh]" />
+                    <img src={dessert} className="w-full h-[70vh]" />
                     {/* Overlay */}
                     <div className="absolute w-full h-[70vh] top-0 left-0 bg-black opacity-50"></div>
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -20,4 +20,4 @@ const Pizza = () => {
     );
 };
 
-export default Pizza;
+export default Dessert;
