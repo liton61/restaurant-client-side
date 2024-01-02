@@ -1,4 +1,6 @@
 import chef from '../../assets/chef.jpg';
+import chef2 from '../../assets/chef2.jpg';
+import chef3 from '../../assets/chef3.jpg';
 
 const Chef = () => {
     return (
@@ -13,14 +15,14 @@ const Chef = () => {
                     <p className="text-gray-600">Featured Dish: Spaghetti Carbonara</p>
                 </div>
                 <div className="bg-gray-100 border border-black rounded-lg shadow-md p-6">
-                    <img src={chef} alt="Chef 2" className="w-full h-48 object-cover rounded mb-4" />
+                    <img src={chef2} alt="Chef 2" className="w-full h-48 object-cover rounded mb-4" />
                     <h2 className="text-xl font-semibold">Chef Jane Smith</h2>
                     <p className="text-gray-600">Specialty: French Pastries</p>
                     <p className="text-gray-600">Experience: Over 10 years</p>
                     <p className="text-gray-600">Featured Dish: Crème Brûlée</p>
                 </div>
                 <div className="bg-gray-100 border border-black rounded-lg shadow-md p-6">
-                    <img src={chef} alt="Chef 3" className="w-full h-48 object-cover rounded mb-4" />
+                    <img src={chef3} alt="Chef 3" className="w-full h-48 object-cover rounded mb-4" />
                     <h2 className="text-xl font-semibold">Chef Alex Johnson</h2>
                     <p className="text-gray-600">Specialty: Japanese Cuisine</p>
                     <p className="text-gray-600">Experience: Over 20 years</p>

@@ -1,14 +1,18 @@
-
+import banner from '../../assets/banner.jpg'
 
 const Cover = () => {
     return (
         <div>
-            <div className="hero h-[80vh] rounded" style={{ backgroundImage: 'url(https://i.postimg.cc/J7BvVDKq/banner3.jpg)' }}>
-                <div className="hero-overlay lg:w-1/2 lg:h-[50vh] md:h-[60vh] md:w-3/4 bg-opacity-50 rounded"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div className="carousel w-full rounded">
+                <div id="slide1" className="carousel-item relative w-full">
+                    <img src={banner} className="w-full h-[80vh]" />
+                    {/* Overlay */}
+                    <div className="absolute w-full h-[80vh] top-0 left-0 bg-black opacity-50"></div>
+                    <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <div className="max-w-md mx-auto text-center text-white">
+                            <h1 className="mb-5 text-5xl font-bold">Bistro Boss</h1>
+                            <p className="mb-5">Welcome to Bistro Boss where we combine passion, expertise, and quality ingredients to create memorable dining experiences for our customers.</p>
+                        </div>
                     </div>
                 </div>
             </div>

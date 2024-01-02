@@ -1,4 +1,4 @@
-import drinks from '../../assets/banner/drinks.jpg';
+import drinks from '../../assets/drinks.jpg';
 
 const Drinks = () => {
     return (
@@ -10,8 +10,8 @@ const Drinks = () => {
                     <div className="absolute w-full h-[70vh] top-0 left-0 bg-black opacity-50"></div>
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <div className="max-w-md mx-auto text-center text-white">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <h1 className="mb-5 text-5xl font-bold">Drinks</h1>
+                            <p className="mb-5">Effervescent elixirs of various flavors, offering a bubbly, refreshing sensation to quench thirst and invigorate the palate.</p>
                         </div>
                     </div>
                 </div>

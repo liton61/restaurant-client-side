@@ -1,4 +1,4 @@
-import pizza from '../../assets/banner/pizza.jpg';
+import pizza from '../../assets/pizza.jpg';
 
 const Pizza = () => {
     return (
@@ -10,8 +10,8 @@ const Pizza = () => {
                     <div className="absolute w-full h-[70vh] top-0 left-0 bg-black opacity-50"></div>
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <div className="max-w-md mx-auto text-center text-white">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <h1 className="mb-5 text-5xl font-bold">Pizza</h1>
+                            <p className="mb-5">A delicious medley of gooey cheese, savory toppings, and a crispy crust—a universally loved culinary delight that satisfies with every bite.</p>
                         </div>
                     </div>
                 </div>
