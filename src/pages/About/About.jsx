@@ -15,54 +15,60 @@ const About = () => {
                     </p>
                 </div>
             </section>
-            <section className="p-6 lg:w-3/4 mx-auto my-20">
-                <div className="container mx-auto flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-10 mb-6 lg:mb-0">
+            <section className="lg:w-3/4 mx-auto my-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:px-0 px-5">
+                    <div className="">
                         <img
                             src={chef}
-                            alt="Banker"
+                            alt=""
                             className="rounded-lg"
                         />
                     </div>
-                    <div className="lg:w-1/2">
-                        <h2 className="text-3xl font-bold mb-4">Our Chef</h2>
-                        <p className="text-lg text-gray-700 text-justify">
-                            Meet our experienced chef who crafts delightful dishes with creativity and expertise.Chefs are culinary wizards who expertly craft mouthwatering dishes, blending creativity, skill, and a deep knowledge of ingredients and flavors to create delightful culinary experiences.
-                        </p>
+                    <div className="flex justify-center items-center">
+                        <div>
+                            <h2 className="text-3xl font-bold mb-4">Our Chef</h2>
+                            <p className="text-lg text-gray-700 text-justify">
+                                Meet our experienced chef who crafts delightful dishes with creativity and expertise.Chefs are culinary wizards who expertly craft mouthwatering dishes, blending creativity, skill, and a deep knowledge of ingredients and flavors to create delightful culinary experiences.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className="p-6 lg:w-3/4 mx-auto my-20">
-                <div className="container mx-auto flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-10 mb-6 lg:mb-0">
-                        <h2 className="text-3xl font-bold mb-4">Our Ambiance</h2>
-                        <p className="text-lg text-gray-700 text-justify">
-                            It is the intangible quality that sets the tone for an experience, whether in a restaurant, a room, or any environment. Ambiance plays a vital role in influencing emotions, creating a welcoming or specific atmosphere that complements and enhances the overall experience.
-                        </p>
-                    </div>
-                    <div className="lg:w-1/2">
+            <section className="lg:w-3/4 mx-auto my-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:px-0 px-5">
+                    <div>
                         <img
                             src={ambiance}
-                            alt="Corporate Professionals"
+                            alt=""
                             className="rounded-lg"
                         />
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        <div>
+                            <h2 className="text-3xl font-bold mb-4">Our Ambiance</h2>
+                            <p className="text-lg text-gray-700 text-justify">
+                                It is the intangible quality that sets the tone for an experience, whether in a restaurant, a room, or any environment. Ambiance plays a vital role in influencing emotions, creating a welcoming or specific atmosphere that complements and enhances the overall experience.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className="p-6 lg:w-3/4 mx-auto my-20">
-                <div className="container mx-auto flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-10 mb-6 lg:mb-0">
+            <section className="lg:w-3/4 mx-auto my-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:px-0 px-5">
+                    <div>
                         <img
                             src={ingredients}
-                            alt="Developer"
+                            alt=""
                             className="rounded-lg"
                         />
                     </div>
-                    <div className="lg:w-1/2">
-                        <h2 className="text-3xl font-bold mb-4">Local Ingredients</h2>
-                        <p className="text-lg text-gray-700 text-justify">
-                            Local ingredients are the heart of regional cuisine, sourced from nearby areas, farms, or producers. They embody the flavors of a specific region, offering freshness and distinct tastes that reflect the areas climate and culture.
-                        </p>
+                    <div className='flex justify-center items-center'>
+                        <div>
+                            <h2 className="text-3xl font-bold mb-4">Local Ingredients</h2>
+                            <p className="text-lg text-gray-700 text-justify">
+                                Local ingredients are the heart of regional cuisine, sourced from nearby areas, farms, or producers. They embody the flavors of a specific region, offering freshness and distinct tastes that reflect the areas climate and culture.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
