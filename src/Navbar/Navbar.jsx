@@ -37,7 +37,7 @@ const Navbar = () => {
                             >
                                 Home
                             </NavLink></li>
-                            <li className="mx-2 font-medium"><NavLink
+                            <li className="font-medium"><NavLink
                                 to="/menu"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
@@ -45,14 +45,22 @@ const Navbar = () => {
                             >
                                 Menu
                             </NavLink></li>
-                            {/* <li className="font-medium"><NavLink
-                                to="/order"
+                            <li className="font-medium"><NavLink
+                                to="/about"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
-                                Order
-                            </NavLink></li> */}
+                                About
+                            </NavLink></li>
+                            <li className="font-medium"><NavLink
+                                to="/contact"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "active" : ""
+                                }
+                            >
+                                Contact
+                            </NavLink></li>
                             <li className="font-medium"><NavLink
                                 to="/dashboard/cart"
                                 className={({ isActive, isPending }) =>
@@ -107,14 +115,6 @@ const Navbar = () => {
                         >
                             Menu
                         </NavLink></li>
-                        {/* <li className="mx-2 font-medium"><NavLink
-                            to="/order"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            Order
-                        </NavLink></li> */}
                         <li className="mx-2 font-medium"><NavLink
                             to="/about"
                             className={({ isActive, isPending }) =>

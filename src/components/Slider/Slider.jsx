@@ -10,7 +10,7 @@ import slide5 from '../../assets/slide5.jpg';
 
 const Slider2 = () => {
     return (
-        <div>
+        <div className='lg:w-3/4 mx-auto mb-16 lg:px-0 px-5'>
             <div className='w-64 mx-auto my-10'>
                 <p className='text-yellow-500 text-center mb-2'>---From 11:00am to 10:00pm---</p>
                 <h3 className='text-xl font-semibold border-y-4 text-center py-3'>ORDER ONLINE</h3>
@@ -22,7 +22,7 @@ const Slider2 = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper lg:w-3/4 mb-16"
+                className="mySwiper"
             >
                 <SwiperSlide>
                     <img src={slide1} alt="" />
