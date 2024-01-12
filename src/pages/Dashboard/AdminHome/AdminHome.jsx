@@ -22,7 +22,7 @@ const AdminHome = () => {
                     user?.displayName ? user.displayName : 'Back'
                 }
             </h2>
-            <div className="flex justify-center items-center mt-10">
+            <div className="flex justify-center items-center my-10">
                 <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow">
 
                     <div className="stat place-items-center">

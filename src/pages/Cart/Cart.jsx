@@ -40,7 +40,7 @@ const Cart = () => {
                     <div>
                         <div className="lg:w-3/4 mx-auto lg:px-0 md:px-4 px-4 mt-10">
                             <div className="flex justify-center">
-                                <div className="stats shadow">
+                                <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow">
 
                                     <div className="stat place-items-center">
                                         <div className="stat-title">Total Quantity</div>
@@ -55,7 +55,6 @@ const Cart = () => {
                                     <div className="stat place-items-center">
                                         <button className="btn btn-secondary font-bold">Pay Now <i className="fa-solid fa-arrow-right"></i></button>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
