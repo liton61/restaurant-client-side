@@ -103,13 +103,13 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-base-200">
+                    <ul className="menu p-4 w-80 min-h-full bg-success">
                         {/* Sidebar content here */}
                         {
                             isAdmin ?
                                 <>
                                     <li className="font-medium mb-2"><NavLink
-                                        to="/"
+                                        to="/dashboard/adminHome"
                                         className={({ isActive, isPending }) =>
                                             isPending ? "pending" : isActive ? "active" : ""
                                         }
@@ -144,7 +144,7 @@ const Dashboard = () => {
                                 :
                                 <>
                                     <li className="font-medium mb-2"><NavLink
-                                        to="/"
+                                        to="/dashboard/userHome"
                                         className={({ isActive, isPending }) =>
                                             isPending ? "pending" : isActive ? "active" : ""
                                         }
@@ -158,14 +158,6 @@ const Dashboard = () => {
                                         }
                                     >
                                         <i className="fa-solid fa-cart-plus"></i> Cart ({cart.length})
-                                    </NavLink></li>
-                                    <li className="font-medium mb-2"><NavLink
-                                        to="/dashboard/reservation"
-                                        className={({ isActive, isPending }) =>
-                                            isPending ? "pending" : isActive ? "active" : ""
-                                        }
-                                    >
-                                        <i className="fas fa-calendar-alt"></i> Reservation
                                     </NavLink></li>
                                     <li className="font-medium mb-2"><NavLink
                                         to="/dashboard/review"
@@ -185,14 +177,6 @@ const Dashboard = () => {
                             }
                         >
                             <i className="fa-solid fa-house"></i> Home
-                        </NavLink></li>
-                        <li className="font-medium mb-2"><NavLink
-                            to="/"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            <i className="fa-solid fa-bars"></i> Menu
                         </NavLink></li>
                     </ul>
                 </div>
