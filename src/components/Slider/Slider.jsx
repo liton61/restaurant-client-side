@@ -25,20 +25,20 @@ const Slider2 = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src={slide1} alt="" />
+                    <img className='rounded' src={slide1} alt="" />
                     <h3 className='text-2xl font-semibold uppercase text-center -m-16'>Salad</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide2} alt="" /><h3 className='text-2xl font-semibold uppercase text-center -m-16'>Pasta</h3>
+                    <img className='rounded' src={slide2} alt="" /><h3 className='text-2xl font-semibold uppercase text-center -m-16 text-white'>Pasta</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide3} alt="" /><h3 className='text-2xl font-semibold uppercase text-center -m-16'>Soup</h3>
+                    <img className='rounded' src={slide3} alt="" /><h3 className='text-2xl font-semibold uppercase text-center -m-16'>Soup</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide4} alt="" /><h3 className='text-2xl font-semibold uppercase text-center -m-16'>Desert</h3>
+                    <img className='rounded' src={slide4} alt="" /><h3 className='text-2xl font-semibold uppercase text-center -m-16'>Desert</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide5} alt="" />
+                    <img className='rounded' src={slide5} alt="" />
                 </SwiperSlide>
             </Swiper>
         </div>
