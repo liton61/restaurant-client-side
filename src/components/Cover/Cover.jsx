@@ -3,7 +3,7 @@ import banner from '../../assets/banner.jpg'
 const Cover = () => {
     return (
         <div>
-            <div className="carousel w-full rounded">
+            <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={banner} className="w-full h-[80vh]" />
                     {/* Overlay */}
