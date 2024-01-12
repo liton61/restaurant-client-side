@@ -30,7 +30,7 @@ const Review = () => {
     }
     return (
         <div>
-            <div className="my-14">
+            <div className="my-14 lg:px-0 px-5">
                 <div className="lg:w-3/4 mx-auto bg-gray-200 p-10 rounded">
                     <h2 className="text-2xl font-semibold mb-4">Leave a Review</h2>
                     <form onSubmit={handleSubmit}>

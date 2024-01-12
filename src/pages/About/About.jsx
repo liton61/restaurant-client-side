@@ -7,7 +7,7 @@ const About = () => {
     return (
         <div>
             <Cover></Cover>
-            <section className="p-6 lg:w-3/4 mx-auto my-10">
+            <section className="lg:w-3/4 mx-auto my-10 lg:px-0 px-5">
                 <div className="mx-auto text-center">
                     <h2 className="text-2xl font-extrabold text-gray-900 sm:text-4xl">About Our Restaurant</h2>
                     <p className="mt-4 text-lg text-gray-700 text-justify">
