@@ -1,4 +1,5 @@
 .bg-image {
     background-image: url('../../assets/featured.jpg');
     border-radius: 5px;
+    border: 1px solid goldenrod;
 }
