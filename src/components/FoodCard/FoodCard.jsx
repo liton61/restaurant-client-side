@@ -46,7 +46,7 @@ const FoodCard = ({ item }) => {
     }
     return (
         <div>
-            <div className="card card-compact lg:w-80 lg:mb-5 md:w-80 mx-auto md:mb-10 mb-10 h-96 border border-yellow-600 p-2">
+            <div className="card card-compact h-96 border border-yellow-600 p-2">
                 <figure><img className="w-full h-40" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
